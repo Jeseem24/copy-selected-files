@@ -1,0 +1,69 @@
+{
+  "name": "copy-selected-files",
+  "displayName": "Copy Selected Files",
+  "description": "Copy selected files content with workspace-relative paths",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "copy-selected-files.copyContent",
+        "title": "Copy Selected Files Content"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "copy-selected-files.copyContent",
+          "when": "explorerResourceIsFolder == false",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Copy Selected Files",
+      "properties": {
+        "copySelectedFiles.maxFileSizeKB": {
+          "type": "number",
+          "default": 1024,
+          "description": "Maximum file size (in KB) allowed to be copied"
+        },
+        "copySelectedFiles.enableCodeFences": {
+          "type": "boolean",
+          "default": true,
+          "description": "Wrap copied content in Markdown code fences"
+        },
+        "copySelectedFiles.includeLanguage": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include language identifier in Markdown code fences"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.107.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "typescript-eslint": "^8.48.1",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
