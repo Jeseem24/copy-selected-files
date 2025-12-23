@@ -4,6 +4,7 @@
   "description": "Copy selected files content with workspace-relative paths",
   "version": "0.0.1",
   "icon": "icon.png",
+  "publisher": "jeseem",
   "engines": {
     "vscode": "^1.107.0"
   },
