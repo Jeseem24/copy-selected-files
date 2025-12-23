@@ -1,10 +1,21 @@
 {
   "name": "copy-selected-files",
   "displayName": "Copy Selected Files",
-  "description": "Copy selected files content with workspace-relative paths",
+ "description": "Copy contents of multiple selected files as Markdown for ChatGPT, AI prompts, code reviews, and documentation.",
   "version": "0.0.1",
   "icon": "icon.png",
   "publisher": "jeseem",
+  "keywords": [
+  "copy files",
+  "clipboard",
+  "chatgpt",
+  "ai",
+  "prompt",
+  "markdown",
+  "productivity",
+  "code review",
+  "multi file"
+],
   "repository": {
   "type": "git",
   "url": "https://github.com/Jeseem24/copy-selected-files"
