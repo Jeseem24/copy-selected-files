@@ -5,6 +5,14 @@
   "version": "0.0.1",
   "icon": "icon.png",
   "publisher": "jeseem",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/Jeseem24/copy-selected-files"
+},
+"bugs": {
+  "url": "https://github.com/Jeseem24/copy-selected-files/issues"
+},
+"homepage": "https://github.com/Jeseem24/copy-selected-files",
   "engines": {
     "vscode": "^1.107.0"
   },
@@ -67,10 +75,5 @@
     "typescript": "^5.9.3",
     "@vscode/test-cli": "^0.0.12",
     "@vscode/test-electron": "^2.5.2"
-  },
-  "repository": {
-  "type": "git",
-  "url": "https://github.com/Jeseem24/copy-selected-files"
-}
-
+  }
 }
